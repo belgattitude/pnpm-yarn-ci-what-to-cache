@@ -1,0 +1,40 @@
+{
+  "name": "pnpm-what-to-cache-monorepo",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/belgattitude/pnpm-yarn-ci-what-to-cache",
+  "author": {
+    "name": "Vanvelthem Sébastien",
+    "url": "https://github.com/belgattitude"
+  },
+  "scripts": {
+    "g:turbo": "turbo",
+    "g:build": "pnpm -r --stream build",
+    "g:test-unit": "pnpm -r --stream test-unit",
+    "g:lint": "pnpm -r --aggregate-output lint",
+    "g:typecheck": "pnpm -r typecheck",
+    "deps:check": "npx -y npm-check-updates@latest --configFileName ncurc.yml --workspaces --root --mergeConfig",
+    "deps:update": "npx -y npm-check-updates@latest --configFileName ncurc.yml -u --workspaces --root --mergeConfig",
+    "nuke:node_modules": "rimraf --glob '**/node_modules'",
+    "deduplicate": "pnpm dedupe"
+  },
+  "resolutions?": {
+    "eslint-plugin-react-hooks": "https://github.com/vercel/next.js/issues/52365"
+  },
+  "resolutions": {
+    "eslint-plugin-react-hooks": "4.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "eslint": "8.45.0",
+    "prettier": "3.0.0",
+    "rimraf": "5.0.1",
+    "turbo": "1.10.7",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=18.12.0",
+    "pnpm": ">=8.6.7"
+  },
+  "packageManager": "pnpm@8.6.7"
+}
