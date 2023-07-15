@@ -45,8 +45,9 @@ inputs:
     default: 'false'
   enable-corepack:
     description: 'Enable corepack'
+    type: boolean
     required: false
-    default: 'false'
+    default: false
 
 runs:
   using: 'composite'
