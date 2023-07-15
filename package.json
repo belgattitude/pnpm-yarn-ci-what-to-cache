@@ -1,3 +1,7 @@
 {
-
+  "scripts": {
+    "install-repo": "npm run init-pnpm && npm run init-yarn-nm",
+    "init-pnpm": "cd pnpm-monorepo && pnpm i && pnpm dedupe",
+    "init-yarn-nm": "cd yarn-nm-monorepo && yarn install && yarn dedupe"
+  }
 }
