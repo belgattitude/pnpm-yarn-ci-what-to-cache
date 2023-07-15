@@ -36,4 +36,4 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
         with:
-          cwd: ./yarn-monorepo
+          cwd: ${{ github.workspace }}/yarn-monorepo
