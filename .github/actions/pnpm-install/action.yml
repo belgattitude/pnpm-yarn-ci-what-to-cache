@@ -47,7 +47,8 @@ runs:
     - uses: pnpm/action-setup@v2.2.4
       if: ${{ inputs.enable-corepack == 'false' }}
       with:
-        run_install: false
+        version: 8.6.7
+
         # If you're not setting the packageManager field in package.json, add the version here
         # version: 8.6.4
 
