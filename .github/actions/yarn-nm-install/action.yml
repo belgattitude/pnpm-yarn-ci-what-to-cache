@@ -26,6 +26,7 @@
 
 name: 'Yarn install (node-modules)'
 description: 'Run yarn install with node_modules linker and cache enabled'
+
 inputs:
   cwd:
     description: "Changes node's process.cwd() if the project is not located on the root. Default to process.cwd()"
@@ -53,7 +54,7 @@ runs:
 
   steps:
     - name: ⚙️ Enable Corepack
-      if: ${{ inputs.enable-corepack }} == 'true'
+      if: inputs.enable-corepack == 'true'
       shell: bash
       working-directory: ${{ inputs.cwd }}
       run: |

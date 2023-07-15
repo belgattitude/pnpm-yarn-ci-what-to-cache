@@ -21,6 +21,7 @@
 
 name: 'PNPM install'
 description: 'Run pnpm install with cache enabled'
+
 inputs:
   enable-corepack:
     description: 'Enable corepack'
