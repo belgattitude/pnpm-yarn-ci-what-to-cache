@@ -7,6 +7,10 @@
     "name": "Vanvelthem Sébastien",
     "url": "https://github.com/belgattitude"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "g:turbo": "turbo",
     "g:build": "pnpm -r --stream build",
