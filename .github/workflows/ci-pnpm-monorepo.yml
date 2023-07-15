@@ -35,3 +35,5 @@ jobs:
 
       - name: 📥 Monorepo install
         uses: ./.github/actions/pnpm-install
+        with:
+          cwd: ./pnpm-monorepo
