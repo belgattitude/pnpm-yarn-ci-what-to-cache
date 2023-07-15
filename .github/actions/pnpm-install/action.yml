@@ -48,7 +48,6 @@ runs:
       if: ${{ inputs.enable-corepack == 'false' }}
       with:
         version: 8.6.7
-
         # If you're not setting the packageManager field in package.json, add the version here
         # version: 8.6.4
 
