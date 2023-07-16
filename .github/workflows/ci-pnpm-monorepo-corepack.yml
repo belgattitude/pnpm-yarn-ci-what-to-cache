@@ -1,4 +1,4 @@
-name: CI-yarn-nm-monorepo
+name: CI-pnpm-monorepo-corepack
 
 on:
   push:
@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  install-yarn-nm-monorepo:
+  install-pnpm-monorepo-corepack:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,7 +33,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 📥 Yarn monorepo install
-        uses: ./.github/actions/yarn-nm-install
+      - name: 📥 PNPM monorepo install (corepack)
+        uses: ./.github/actions/pnpm-install
         with:
-          cwd: ${{ github.workspace }}/yarn-nm-monorepo
+          cwd: ${{ github.workspace }}/pnpm-monorepo
+          enable-corepack: true
