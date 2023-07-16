@@ -46,11 +46,10 @@ runs:
 
     - uses: pnpm/action-setup@v2.2.4
       if: ${{ inputs.enable-corepack == 'false' }}
-      working-directory: ${{ inputs.cwd }}
       with:
         run_install: false
         # If you're not setting the packageManager field in package.json, add the version here
-        # version: 8.6.4
+        version: 8.6.7
 
     - name: Expose pnpm config(s) through "$GITHUB_OUTPUT"
       id: pnpm-config
