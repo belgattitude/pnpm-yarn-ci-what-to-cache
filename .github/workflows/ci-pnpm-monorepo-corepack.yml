@@ -1,4 +1,4 @@
-name: CI-pnpm-monorepo
+name: CI-pnpm-monorepo-corepack
 
 on:
   push:
@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  install-pnpm-monorepo:
+  install-pnpm-monorepo-corepack:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -32,11 +32,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: 📥 PNPM monorepo install
-        uses: ./.github/actions/pnpm-install
-        with:
-          cwd: ${{ github.workspace }}/pnpm-monorepo
 
       - name: 📥 PNPM monorepo install (corepack)
         uses: ./.github/actions/pnpm-install

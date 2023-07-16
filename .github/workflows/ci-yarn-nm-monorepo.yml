@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 📥 Monorepo install
+      - name: 📥 Yarn monorepo install
         uses: ./.github/actions/yarn-nm-install
         with:
           cwd: ${{ github.workspace }}/yarn-nm-monorepo
