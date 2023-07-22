@@ -38,3 +38,4 @@ jobs:
         with:
           cwd: ${{ github.workspace }}/yarn-nm-monorepo
           enable-corepack: true
+          cache-npm-cache: true

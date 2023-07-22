@@ -37,3 +37,4 @@ jobs:
         uses: ./.github/actions/yarn-nm-install
         with:
           cwd: ${{ github.workspace }}/yarn-nm-monorepo
+          cache-npm-cache: true
