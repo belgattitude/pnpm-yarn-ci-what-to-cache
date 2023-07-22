@@ -6,7 +6,7 @@
 # Usage in workflows steps:                                                            #
 #                                                                                      #
 #      - name: 📥 Monorepo install                                                     #
-#        uses: ./.github/actions/pnm-install                                           #
+#        uses: ./.github/actions/pnpm-install                                          #
 #        with:                                                                         #
 #          enable-corepack: false # (default)                                          #
 #          cwd: ${{ github.workspace }}/apps/my-app # (default = '.')                  #
